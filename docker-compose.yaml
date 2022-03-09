@@ -3,17 +3,21 @@ version: '3'
 services:
   app:
     build: .
-    volumes:
-      - app:/app
+    container_name: python-redis
+    restart: always
     ports:
-      - "8000:8000"
-    links:
-      - redis:redis
+      - "8080:8000"
     depends_on:
       - redis
+    volumes:
+      - app:/app
+
   redis:
     image: "redis:alpine"
-    expose:
+    container_name: redis
+    restart: always
+    ports:
       - "6379"
+
 volumes:
   app:
