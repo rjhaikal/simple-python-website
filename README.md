@@ -131,19 +131,22 @@ python-redis | [2022-03-15 08:18:29 +0000] [1] [INFO] Using worker: sync
 Compose pulls a Redis image, builds an image for your code, and starts the services you defined. In this case, the code is statically copied into the image at build time.
 
 2. Enter http://localhost:8080/ in a browser to see the application running.
-If you’re using Docker natively on Linux, Docker Desktop for Mac, or Docker Desktop for Windows, then the web app should now be listening on port 8000 on your Docker daemon host. Point your web browser to http://localhost:8000 to find the `Hello World with Nevtik` message. If this doesn’t resolve, you can also try http://127.0.0.1:8000.
+If you’re using Docker natively on Linux, Docker Desktop for Mac, or Docker Desktop for Windows, then the web app should now be listening on port 8000 on your Docker daemon host. Point your web browser to http://localhost:8080 to find the `Hello World with Nevtik` message. If this doesn’t resolve, you can also try http://127.0.0.1:8080.
 
 You should see a message in your browser saying:
 
 ![11](https://user-images.githubusercontent.com/72386335/158336533-7023f1d0-c277-456c-a7a3-838c70147b4b.png)
 
-And if you go to path /visitor:
+And if you go to endpoint http://127.0.0.1:8000/visitor:
 
-
-
-After client hit /visitor endpoint, they will get the visitor number keep increasing
-![13](https://user-images.githubusercontent.com/72386335/158336842-4e001be8-6fda-4fa8-85db-a41b77f296aa.png)
+![12](https://user-images.githubusercontent.com/72386335/158337427-07425ed8-65ca-4f6c-af81-aa667a3392de.png)
 
 The more you refresh your browser, visitor count will be stay increasing.
+
+![13](https://user-images.githubusercontent.com/72386335/158336842-4e001be8-6fda-4fa8-85db-a41b77f296aa.png)
+
+If you consider to reset the number back to zero, you could hit this endpoint.
+
+![14](https://user-images.githubusercontent.com/72386335/158337883-b451fb4f-cad2-4feb-9291-3df59ff36467.png)
 
 
